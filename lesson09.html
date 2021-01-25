@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-9 Event bubble with example</title>
+</head>
+<body>
+    <h1>18-9 Event bubble with example</h1>
+<div id="container">
+    <ul id="myList">
+        <li id="first" class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Maiores, quas fuga!</li>
+        <li class="item">In, assumenda tempore!</li>
+        <li class="item">Culpa, totam sint!</li>
+        <li class="item">Beatae, possimus fuga!</li>
+    </ul>
+</div>
+   <script>
+       // targeting #first
+       document.getElementById('first').addEventListener('click', function(event){
+           console.log('First Item Clicked');
+       });
+
+       // targeting #myList
+       document.getElementById('myList').addEventListener('click', function(event){
+           console.log('List Items Clicked');
+       });
+
+       // targeting #container
+       document.getElementById('container').addEventListener('click', function(event){
+           console.log('Container Clicked');
+       });
+   </script>
+</body>
+</html>
