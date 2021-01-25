@@ -7,4 +7,6 @@ https://mobarak-ali.github.io/module18/
 ## 18-7 add event handler directly on an element
 ## 18-8 add event listener using javascript
 
-## 18-7 18-9 Event bubble with example
+## 18-9 Event bubble with example
+
+# 18-10 Stop propagating event bubble
