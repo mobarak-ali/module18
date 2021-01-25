@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-8 add event listener using javascript</title>
+</head>
+<body>
+    <h1>18-8 add event listener using javascript</h1>
+
+    <h2 onclick="handleClick()">Exploraing Events</h2>
+    <button>Click me-1</button>
+    <button id="second">Click me-2</button>
+    <button>Click me-3</button>
+    <button id="lastbtn">Click me-4</button>
+    
+    <script>
+        function handleClick(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        const secondBtn = document.getElementById('second');
+
+        // // First way
+        // secondBtn.onclick = function(){
+        //     console.log("Second Button Clicked!");
+        // }
+            
+        // // Second Way
+        //     secondBtn.onclick = handleClick;
+
+
+        // // Third way
+        secondBtn.addEventListener('click', handleClick);
+
+        const lastBtn = document.getElementById('lastbtn').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'tomato';
+        })
+        // Forth way
+        secondBtn.addEventListener('click', handleClick);
+
+    </script>
+   
+</body>
+</html>
